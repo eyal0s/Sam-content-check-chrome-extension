@@ -1,17 +1,222 @@
 <!doctype html>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+
 <style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+	* {
+		direction: rtl;
+		font-family: 'Arimo', sans-serif;
 	}
+
+	#mainPopup {
+		height: 580;
+		width: 460px;
+		font-family: 'Arimo', sans-serif;
+	}
+
+	body {
+		margin: 0px;
+	}
+
 	h1 {
 		font-size: 2em;
+	}
+
+	h4 {
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	hr {
+		margin-bottom: 0px;
+		margin-top: 18px;
+		border: 1px solid #DEDFF6;
+	}
+
+	.header {
+		font-size: 24px;
+		background: rgba(90, 94, 209, 0.2);
+		display: flex;
+		padding-right: 10px;
+	}
+
+	.subheader {
+		font-size: 18px;
+		margin-right: 17px;
+		margin-top: 25px;
+	}
+
+	.footer {
+		margin-right: 17px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+		height: 50px;
+	}
+
+	.contentSection {
+		margin-right: 17px;
+
+	}
+
+	.runningText {
+		font-size: 16px;
+		margin-left: 17px;
+	}
+
+	.boldTitle {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 0px;
+	}
+
+	#title {
+		font-size: 24px;
+		font-weight: normal;
+		padding-right: 8px;
+	}
+
+	.copyToClipboardSection {
+		margin-right: 17px;
+		flex-direction: column;
+
+	}
+
+	.copyToClipboardHorizontal {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#copyToClipboardBox {
+		background: #FFFFFF;
+		border: 1px solid #DEDFF6;
+		box-sizing: border-box;
+		border-radius: 5px;
+		width: 260px;
+		height: 55px;
+		display: flex;
+		font-size: 18px;
+		color: #5A5ED1;
+		text-align: left;
+		justify-content: left;
+		margin-left: 17px;
+	}
+
+	#copyToClipboardButton {
+		background: rgba(90, 94, 209, 0.2);
+		width: 58px;
+		height: 53px;
+		text-align: center;
+		margin-right: auto;
+		cursor: pointer;
+	}
+
+	#copyToClipboardContent {
+		margin-right: auto;
+		vertical-align: middle;
+		padding-top: 17px;
+		margin-left: -40px;
+	}
+
+	.alignVerticalCenter {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.lessProminentText {
+		color: rgba(52, 53, 59, 0.6);
+	}
+
+	#whatsappLink {
+		margin-left: 17px;
 	}
 </style>
 
 <div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
+
+	<div class="header">
+		<img src="/statics/sam-logo.svg" />
+		<h2 id="title">
+			כל מילה חשובה
+		</h2>
+	</div>
+
+	<div class="subheader">
+		תיקוני הגהה, דקדוק ואיות על ידי כותבי תוכן אמריקאים ומנוסים 🇺🇸 של גוגל סליידס וגוגל דוקס.
+	</div>
+
+	<div class="contentSection">
+		<h4 class="boldTitle">
+			תוך כמה זמן ⏳
+		</h4>
+		<p class="runningText">
+			את הגרסא המתוקנת תקבלו תוך 24 שעות מרגע השיתוף.
+		</p>
+	</div>
+
+	<div class="contentSection">
+			<h4 class="boldTitle">
+				כמה זה עולה 💸
+			</h4>
+			<p class="runningText">
+				4 דולר עבור שקופית (עבור מצגת עם 10 שקופיות = 40 דולר) <br>
+				8 דולר עבור עמוד (עבור מסמך עם 2 עמודים = 16 דולר)
+			</p>
+		</div>
+
+	<div class="contentSection">
+		<h4 class="boldTitle">
+			איך משלמים 🤝
+		</h4>
+		<p class="runningText">
+			בקשת תשלום תישלח עם סיום העבודה. ניתן לשם אונליין באמצעות פייפאל, ביט ופפר.
+		</p>
+	</div>
+
+	<div class="copyToClipboardSection">
+		<div>
+			<h4 class="boldTitle">
+				איך מתחילים? 👈
+			</h4>
+		</div>
+		<div class="copyToClipboardHorizontal">
+			<p>
+				שתפו את המסמך עם
+			</p>
+			<div id="copyToClipboardBox">
+				<div id="copyToClipboardContent">
+					hello@thedot.io
+				</div>
+				<button id="copyToClipboardButton" data-clipboard-text="hello@thedot.io">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM21 7C21 5.89543 20.1046 5 19 5H8C6.9 5 6.01 5.9 6.01 7L6 21C6 22.1 6.89 23 7.99 23H19C20.1 23 21 22.1 21 21V11V7ZM8 21V7H14H19V12V21H8Z"
+							fill="#5A5ED1" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<hr>
+
+	<div class="footer">
+		<div class="alignVerticalCenter">
+			אנחנו כאן לכל שאלה
+		</div>
+		<div class="alignVerticalCenter">
+			<span class="lessProminentText">יונתן</span> 0547674717
+		</div>
+		<div class="alignVerticalCenter" id="whatsappLink">
+			<a href="https://api.whatsapp.com/send?phone=972547674717" target="_blank">
+				<img src="/statics/whatsapp.svg">
+			</a>
+		</div>
+	</div>
+
 </div>
+<script src="../../js/jquery/jquery.min.js"></script>
+<script src="../../statics/clipboard.min.js"></script>
+<script src="app.js"></script>
