@@ -1,9 +1,8 @@
 {
-  "name": "Sam: Your Contnet helper",
+  "name": "Sam: Your Content Helper",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "Content check, spelling and proofreading by experts",
-  "homepage_url": "https://www.thedot.io",
+  "description": "Content check, spelling and proofreading by human experts",
   "icons": {
     "16": "icons/16.png",
     "48": "icons/48.png",
@@ -21,6 +20,6 @@
     "scripts": ["app.js"]
   },
   "permissions": [
-    "clipboardWrite"
+    "clipboardWrite","tabs"
   ]
 }
