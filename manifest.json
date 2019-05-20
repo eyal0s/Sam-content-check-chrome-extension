@@ -1,6 +1,6 @@
 {
   "name": "Sam: Your Content Helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Content check, spelling and proofreading by human experts",
   "icons": {
